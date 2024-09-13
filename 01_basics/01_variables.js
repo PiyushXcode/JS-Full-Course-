@@ -1,4 +1,3 @@
-console.log('Hello Piyush !!');
 const account_id = 22101065007;
 var account_name = "Piyush";
 let account_type = "Savings";
