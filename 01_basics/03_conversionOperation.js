@@ -54,3 +54,68 @@
 // console.log(typeof StringCheck);
 
 
+//*******************************Oprerator************************************/
+
+// basic Opreration that we Know whats its Output;
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**2);
+// console.log(2/2);
+// console.log(2%2);
+
+
+// let str1 = "Hello";
+// let str2 = " Piyush";
+
+// let str3 = str1+str2;
+// console.log(str3);
+
+
+
+// console.log('1' + 2);
+// console.log(1 + '2');
+// console.log(1 + 2 + '2');//here first value is number that's why its considered  value as number and Added its As number;
+// console.log('1' + 2 + 2);//here first value is string that's why its considered  value as String and Added its As String;
+
+
+console.log(2 + 3 * 4 / 5); //tho it will give the Solution but its Not the Proper way to write  the  code as ,In industry The code Should be proper and readable and Understandable;
+
+console.log(2 + (3 * 4) / 5); //this is the proper way to write a code;
+
+// console.log(true);
+// console.log(+true);//output => 1
+// console.log(true+);//output => shows error;
+
+
+
+let num1 ,num2 ,num3;
+
+num1 = num2 =num3 =2+2;//code is Not readable;
+
+
+let gameCounter = 100;
+// gameCounter++;
+++gameCounter;
+console.log(gameCounter); //output => 101;
+
+
+let x = 3;
+const y =x++;//PostFix = Increse the value After Execution
+
+console.log(`x:${x},y:${y}`);
+//excpeted output x:4 , y:3;
+
+let a= 3;
+const b = ++a;//PreFix = Increse the value Before Execution
+console.log(`a:${a},b:${b}`);
+//excepted output => a:4 , b:4;
+
+
+
+// link to Study
+// https://tc39.es/ecma262/
+
+
+
