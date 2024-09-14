@@ -47,5 +47,4 @@
 
 
 // === (Strict Check) checks both the value and the type of the variables.
-
-console.log("2" === 2);
+console.log("2" === 2);//output => flase;
