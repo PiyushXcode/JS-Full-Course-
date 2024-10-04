@@ -10,6 +10,6 @@
 
 
 ( (UserValue) => {
-    //This Is Simple IIFE; 
+    //This Is Simple IIFE;  
     console.log(`DB ${UserValue} CONNECTED SUCCESSFULLY `);
 }) ("Piyush");
