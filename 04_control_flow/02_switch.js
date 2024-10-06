@@ -52,8 +52,9 @@ switch(month){
     case 12:
         console.log('December');
         break;
-    // default :
-    // console.log('Invalid Value');
+    default :
+    console.log('Invalid Value');
+    break;
     
 }
 
