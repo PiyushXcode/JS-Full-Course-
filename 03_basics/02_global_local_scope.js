@@ -1,6 +1,6 @@
 let first = 100;
 // const second = 200;
-// var third = 300;
+// var third = 300;//var is a Global Scope Variable So Its Value is Accessable From Any Where In the Code;
 
 
 if (true) {
