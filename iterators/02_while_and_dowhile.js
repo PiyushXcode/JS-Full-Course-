@@ -20,3 +20,4 @@ do {
     console.log(`Value of score is ${score}`);
     score++;
 } while (score <= 10);
+
