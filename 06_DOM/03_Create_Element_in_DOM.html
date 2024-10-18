@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM With Chai</title>
+</head>
+<style>
+    body{
+        background-color:#212121;
+        color: #fff;
+    }
+</style>
+<body>
+    <script>
+        let NewElement = document.createElement("div");
+        console.log(NewElement);
+        NewElement.className = "main";
+        NewElement.id =Math.round(Math.random() * 10 + 1);
+        NewElement.setAttribute("tittle","Tittle-Given");
+        // NewElement.innerHTML = "Hello There!";
+        NewElement.style.backgroundColor = "Green";
+        NewElement.style.padding = "12px";
+        let newLineofText = document.createTextNode("This Is Another Line of Code");
+        NewElement.appendChild(newLineofText);
+
+        document.body.appendChild(NewElement);//use to Attach Dom Element to Document Of the body .
+        
+    </script>
+</body>
+</html>
