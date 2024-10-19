@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manuplation</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+       
+    </style>
+</head>
+<body>
+    <ul class="Language-List">
+        <li>JavaScript</li>
+    </ul> 
+    <script>
+        function addLanguage (addLang) {
+            let NewVal = document.createElement("li");
+            NewVal.appendChild(document.createTextNode(`${addLang}`));
+            document.querySelector(".Language-List").appendChild(NewVal);
+        }
+        addLanguage("Phython");
+        addLanguage("Java");
+        addLanguage("Ruby");
+
+
+        //Edit
+            // let NewLanguage = document.querySelector("li:nth-Child(2)")
+            // let NewVal = document.createElement("li");
+            // NewVal.textContent="HTML";
+            // NewLanguage.replaceWith(NewVal);
+        //Edit
+            // let NewLanguage= document.querySelector("li:nth-Child(3)");
+            // let NewVal = document.createElement("li");
+            // NewVal.textContent="Oracal";
+            // NewLanguage.replaceWith(NewVal);
+        //Edit
+        // let firstLanguage = document.querySelector("li:nth-Child(1)");
+        // let NewElem = document.createElement("li");
+        // NewElem.textContent = "TypeScript";
+        // firstLanguage.replaceWith(NewElem);
+
+        //Edit 
+        // Here Is the Optimal way!!
+        let firstLanguage = document.querySelector("li:nth-child(1)");
+        firstLanguage.outerHTML = "<li>TypeScript</li>"
+
+
+        //Remove
+        let LastElement = document.querySelector("li:nth-Child(4)");
+        LastElement.remove();
+    </script>
+</body>
+</html>
