@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            color: aliceblue;
+            background: #414141;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        img {
+            height: 20vh;
+            width: 20vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="images">
+            <ul>
+                <li><img src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Village" id="Village"></li>
+                <li><img src="https://images.pexels.com/photos/21323/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Flower" id="Flower"></li>
+                <li><img src="https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Mountain" id="Mountain"></li>
+                <li><img src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Lake" id="Lake"></li>
+                <li><img src="https://images.pexels.com/photos/459335/pexels-photo-459335.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Flower" id="Flower">
+                </li>
+                <li><a id="google" href="https://www.google.com">Google</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+
+    //type , timestamp , defaultPrevented 
+    //target , toElement , srcElement , currentTarget
+    //clientX , clientY , screenX , screenY , tilteX , tilteY
+    //altKey , ctrKey , shiftKey , keyCode  
+
+
+
+    //Here False is Used for the Propogation from Inside-Out
+
+    // let ul =document.querySelector('.images');
+    //     ul.addEventListener( 'click' , function(e) {
+    //         console.log('Its Inside-Out Propogation In which program Runs form Inside-Out');
+    //         e.preventDefault();
+    //         alert("Clicked On List Element");  
+    //         console.log("You Clicked on List Element");
+
+    //     },false)
+
+
+    // //Here False is Used for the Propogation from Inside-Out
+
+    // let image = document.querySelector("#Mountain");
+    //     image.addEventListener("click", (e) =>{
+    //     console.log('Its Inside-Out Propogation In which program Runs form Inside-Out');
+    //         e.preventDefault();
+    //         alert("You clicked on the Mountain image");
+    //         console.log("You Clicked on Mountain image");  
+    //         e.stopPropagation() //it is use  to Stop The Flow of Propogation;      
+    //     },false);
+
+
+    // Here True is Used for the Propogation from OutSide-In;
+
+    // let image = document.querySelector(".images");
+    // image.addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     console.log('Its Outside-In Propogation In which program Runs form Outside Inwards');
+    //     alert("You clicked on the List");
+    //     console.log("You clicked on the List");
+    //     e.stopPropagation() //it is use  to Stop The Flow of Propogation;     
+    // }, true);
+
+
+    // let Mountain = document.querySelector("#Mountain");
+    // Mountain.addEventListener("click", (e) => {
+    //     e.preventDefault();
+    //     console.log('Its Outside-In Propogation In which program Runs form Outside Inwards');
+    //     alert("You Clicked on Mountain");
+    //     console.log("You Clicked on Mountain");
+    // }, true);
+
+
+
+    //Prevent Default Function
+
+    // let ChangingTheDefaultFunction  = document.querySelector("#google");
+
+    // ChangingTheDefaultFunction.addEventListener( 'click', (e) => {
+    //     e.preventDefault();
+    //     console.log('Google CLicked');
+    //     alert("You Clicked on Google");
+    // } ,false)
+
+
+    //Some Activities
+
+    //On Clicking the Element of It is Removed; 
+
+    let Image = document.querySelector(".images");
+    Image.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(e.target.tagName);
+        let removeIt = e.target.parentNode;
+        if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        removeIt.remove();
+        console.log(removeIt);
+        }
+
+
+    }, false);
+</script>
+
+</html>
